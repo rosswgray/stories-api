@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Seed a DB with some fake stories
+picsum_url = 'https://picsum.photos/seed/picsum/200'
+
+stories = [
+  { title: 'Mo', image: picsum_url, content: 'Hello World' },
+  { title: 'Fabien', image: picsum_url, content: 'Hello Python' },
+  { title: 'Brian', image: picsum_url, content: 'Hello JS' },
+  { title: 'Forrest', image: picsum_url, content: 'Hello Rails' }
+]
+Story.create(stories)
+
+puts 'seeding finished'
