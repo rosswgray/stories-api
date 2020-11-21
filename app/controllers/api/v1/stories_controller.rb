@@ -11,7 +11,7 @@ class Api::V1::StoriesController < Api::V1::BaseController
 
   def update
     if @story.update(story_params)
-      render :show
+      render :show, status: :updated
     else
       render_error
     end
